@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #1a1a1a, #2c2c2c);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.neon-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 4rem;
+    color: #ff00ff;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+            0 0 5px #ff00ff,
+            0 0 10px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 40px #ff00ff;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.smoke {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation: smoke 10s infinite linear;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.smoke-2 {
+    animation-delay: -3s;
+    width: 250px;
+    height: 250px;
+}
+
+.smoke-3 {
+    animation-delay: -6s;
+    width: 300px;
+    height: 300px;
+}
+
+@keyframes smoke {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-600px) scale(2);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .neon-text {
+        font-size: 2.5rem;
+    }
+}
