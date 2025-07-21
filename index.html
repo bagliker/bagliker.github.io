@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ILikeBags - Coming Soon</title>
     <style>
+        html {
+  --s: 58px; /* control the size*/
+  --c1: #aa7942;
+  --c2: #11053b;
+  --c3: #ffffff;
+  
+  --_g: 0 120deg,#0000 0;
+  background:
+    conic-gradient(             at calc(250%/3) calc(100%/3),var(--c3) var(--_g)),
+    conic-gradient(from -120deg at calc( 50%/3) calc(100%/3),var(--c2) var(--_g)),
+    conic-gradient(from  120deg at calc(100%/3) calc(250%/3),var(--c1) var(--_g)),
+    conic-gradient(from  120deg at calc(200%/3) calc(250%/3),var(--c1) var(--_g)),
+    conic-gradient(from -180deg at calc(100%/3) 50%,var(--c2)  60deg,var(--c1) var(--_g)),
+    conic-gradient(from   60deg at calc(200%/3) 50%,var(--c1)  60deg,var(--c3) var(--_g)),
+    conic-gradient(from  -60deg at 50% calc(100%/3),var(--c1) 120deg,var(--c2) 0 240deg,var(--c3) 0);
+  background-size: calc(var(--s)*sqrt(3)) var(--s);
+}
         * {
             margin: 0;
             padding: 0;
@@ -66,6 +83,7 @@
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>ILikeBags</h1>
         <rssapp-list id="5FAhO1y29hXi7Xzs"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
